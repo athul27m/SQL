@@ -11,12 +11,12 @@ up in the data.
 ## Dataset
 
 Source: Kaggle — [Zepto Inventory Dataset](https://www.kaggle.com/datasets/palvinder2006/zepto-inventory-dataset/data?select=zepto_v2.csv)
-~3,000 SKUs with fields like category, MRP, discount %, 
-selling price, weight, and stock status.
+Around 3,000 SKUs with fields like category, MRP, discount 
+percentage, selling price, weight, and stock status.
 
-One thing I noticed early — prices were stored in paise 
-(₹58 showed up as 5800), so I cleaned that up before 
-any analysis.
+One thing I noticed early on was that prices were stored in 
+paise (so ₹58 showed up as 5800). Cleaned that up before 
+starting any analysis.
 
 ---
 
@@ -25,7 +25,7 @@ any analysis.
 | # | Question |
 |---|---|
 | Q1 | Stock vs out-of-stock count across the catalog |
-| Q2 | Products with 0% discount — sold at full MRP |
+| Q2 | Products with 0% discount, sold at full MRP |
 | Q3 | Biggest gap between MRP and actual selling price |
 | Q4 | Which categories generate the most live inventory value |
 | Q5 | Ranking products by discount within each category |
@@ -37,21 +37,21 @@ any analysis.
 
 ## What I found
 
-- Around X% of products are currently out of stock — 
-  [category] had the worst availability
-- [Category] leads in live inventory value at roughly ₹[X]
-- [X] products are sold at full MRP with zero discount, 
-  mostly concentrated in [category]
-- Medium weight products (500g–2kg) get the highest 
-  average discount at X% — makes sense for everyday 
-  grocery staples
+- 12.1% of products are out of stock at any given time.
+- Cooking Essentials has the highest live inventory value at ₹3,37,131
+  which makes sense given how frequently those items are bought.
+- 516 products are sold at full MRP with no discount 
+  whatsoever, more than I expected honestly
+- Heavier products above 2kg get the best average discount 
+  at 8.3%, while lighter everyday items sit lower at around 
+  7.5 to 7.8% — I expected the opposite going into this
 
 ---
 
 ## Tools
-PostgreSQL · MySQL Workbench
+MySQL Workbench
 
 ---
 
 **Athul Murali**  
-[LinkedIn](#) · [GitHub](https://github.com/athul27m)
+[LinkedIn](www.linkedin.com/in/athul-murali)
